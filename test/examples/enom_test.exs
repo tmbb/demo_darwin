@@ -1,5 +1,6 @@
 defmodule EnomTest do
-  use Darwin.TestCase, async: true
+  use ExUnit.Case, async: true
+  use Darwin.TestCase
   # doctest Enom
 
   defp assert_runs_enumeration_only_once(enum_fun) do
@@ -1681,14 +1682,14 @@ defmodule EnomTest.SideEffects do
   #   end
   # end
 
-  #   test "take/2 with no elements works as no-op" do
-  #     iterator = File.stream!(fixture_path("unknown.txt"))
+  # test "take/2 with no elements works as no-op" do
+  #   iterator = File.stream!(fixture_path("unknown.txt"))
 
-  #     assert Enom.take(iterator, 0) == []
-  #     assert Enom.take(iterator, 0) == []
-  #     assert Enom.take(iterator, 0) == []
-  #     assert Enom.take(iterator, 0) == []
-  #   end
+  #   assert Enom.take(iterator, 0) == []
+  #   assert Enom.take(iterator, 0) == []
+  #   assert Enom.take(iterator, 0) == []
+  #   assert Enom.take(iterator, 0) == []
+  # end
 end
 
 defmodule EnomTest.Function do
